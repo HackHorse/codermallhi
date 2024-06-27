@@ -8,10 +8,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+      },
+      keyframes: {
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%, -40%) scale(1)",
+          },
+        },
+      },
+      colors:{
+        green: {
+          600: '#16a34a', // Tailwind's default green-600 color
+        },
+        customBlue: {
+          light: '#4D73FF',  // Light shade of custom blue
+          DEFAULT: '#1649FF',  // Default custom blue
+          dark: '#0027CC',  // Dark shade of custom blue
+        },
+        customBlack: {
+          DEFAULT: '#0B0B0E',
+        }
       },
     },
   },
